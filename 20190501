@@ -1,8 +1,0 @@
-https://www.oracle.com/technetwork/articles/sql/11g-schemamanagement-089869.html
-
-oracle 11g add a new schema.
-0. set ddl_lock_timeout value to 10s.
-1. just use alter table add with out extra options.
-2. add with option not null and default value.
-
-these will do a good practice for altering database.
