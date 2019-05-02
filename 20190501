@@ -6,3 +6,9 @@ oracle 11g add a new schema.
 2. add with option not null and default value.
 
 these will do a good practice for altering database.
+
+关于数据库连接池
+这个是在数据库server上的一个东西，管理很多的连接
+数据库连接：这个是一个物理通路
+session：类似于网页session。一个用户用密码，登录了一个数据库。
+当然，一个连接可以有多个session。
