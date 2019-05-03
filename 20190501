@@ -61,6 +61,341 @@ ORA-28009: connection as SYS should be as SYSDBA or SYSOPER
 Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - Production
 With the Partitioning, OLAP, Data Mining and Real Application Testing options
 に接続されました。
+SQL> show tables
+SP2-0158: 不明なSHOWオプションです。"tables"
+SQL> show table
+SP2-0158: 不明なSHOWオプションです。"table"
+SQL> show schema
+SP2-0158: 不明なSHOWオプションです。"schema"
+SQL> help
+
+ HELP
+ ----
+
+ Accesses this command line help system. Enter HELP INDEX or ? INDEX
+ for a list of topics.
+
+ You can view SQL*Plus resources at
+     http://www.oracle.com/technology/tech/sql_plus/
+ and the Oracle Database Library at
+     http://www.oracle.com/technology/documentation/
+
+ HELP|? [topic]
+
+
+SQL> help show
+
+ SHOW
+ ----
+
+ Shows the value of a SQL*Plus system variable, or the current
+ SQL*Plus environment. SHOW SGA requires a DBA privileged login.
+
+ SHO[W] option
+
+ where option represents one of the following terms or clauses:
+     system_variable
+     ALL
+     BTI[TLE]
+     ERR[ORS] [{FUNCTION | PROCEDURE | PACKAGE | PACKAGE BODY | TRIGGER
+        | VIEW | TYPE | TYPE BODY | DIMENSION | JAVA CLASS} [schema.]name]
+     LNO
+     PARAMETERS [parameter_name]
+     PNO
+     RECYC[LEBIN] [original_name]
+     REL[EASE]
+     REPF[OOTER]
+     REPH[EADER]
+     SGA
+     SPOO[L]
+     SPPARAMETERS [parameter_name]
+     SQLCODE
+     TT[ITLE]
+     USER
+
+
+SQL> show all
+appinfoはOFFであり、設定先は "SQL*Plus"です。
+arraysize 15
+autocommit OFF
+autoprint OFF
+autorecovery OFF
+autotrace OFF
+blockterminator "." (hex 2e)
+btitle OFFであり、次のSELECT文の先頭から数文字です。
+cmdsep OFF
+colsep " "
+compatibility version NATIVE
+concat "." (hex 2e)
+copycommit 0
+COPYTYPECHECKは、ON
+define "&" (hex 26)
+describe DEPTH 1 LINENUM OFF INDENT ON
+echo OFF
+editfile "afiedt.buf"
+embedded OFF
+escape OFF
+escchar OFF
+exitcommit ON
+6 行以上に対するFEEDBACKがONです。
+flagger OFF
+flush ON
+heading ON
+headsep "|" (hex 7c)
+instance "local"
+linesize 80
+lno 14
+loboffset 1
+logsource ""
+long 80
+longchunksize 80
+markup HTML OFF HEAD "<style type='text/css'> body {font:10pt Arial,Helvetica,sans-serif; color:black; background:White;} p {font:10pt Arial,Helvetica,sans-serif; color:black; background:White;} table,tr,td {font:10pt Arial,Helvetica,sans-serif; color:Black; background:#f7f7e7; padding:0px 0px 0px 0px; margin:0px 0px 0px 0px;} th {font:bold 10pt Arial,Helvetica,sans-serif; color:#336699; background:#cccc99; padding:0px 0px 0px 0px;} h1 {font:16pt Arial,Helvetica,Geneva,sans-serif; color:#336699; background-color:White; border-bottom:1px solid #cccc99; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;-
+} h2 {font:bold 10pt Arial,Helvetica,Geneva,sans-serif; color:#336699; background-color:White; margin-top:4pt; margin-bottom:0pt;} a {font:9pt Arial,Helvetica,sans-serif; color:#663300; background:#ffffff; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}</style><title>SQL*Plus Report</title>" BODY "" TABLE "border='1' width='90%' align='center' summary='Script output'" SPOOL OFF ENTMAP ON PREFORMAT OFF
+newpage 1
+null ""
+numformat ""
+numwidth 10
+pagesize 14
+PAUSE は OFF です。
+pno 0
+recsep WRAP
+recsepchar " " (hex 20)
+release 1102000100
+repfooter OFF であり、NULLです
+repheader OFF であり、NULLです
+securedcol is OFF
+serveroutput OFF
+shiftinout INVISIBLE
+showmode OFF
+spool OFF
+sqlblanklines OFF
+sqlcase MIXED
+sqlcode 0
+sqlcontinue "> "
+sqlnumber ON
+sqlpluscompatibility 11.2.0
+sqlprefix "#" (hex 23)
+sqlprompt "SQL> "
+sqlterminator ";" (hex 3b)
+suffix "sql"
+tab ON
+termout ON
+timing OFF
+trimout ON
+trimspool OFF
+ttitle OFFであり、次のSELECT文の先頭から数文字です。
+underline "-" (hex 2d)
+ユーザーは"SYS"です。
+verify ON
+wrap : 行がラップされます
+errorlogging is OFF
+SQL> cls
+SP2-0042: 不明なコマンドです("cls")。行の残りは無視されました。
+SQL> clear
+SQL> show user
+ユーザーは"SYS"です。
+SQL> show users
+SP2-0158: 不明なSHOWオプションです。"users"
+SQL> show user
+ユーザーは"SYS"です。
+SQL> show all
+appinfoはOFFであり、設定先は "SQL*Plus"です。
+arraysize 15
+autocommit OFF
+autoprint OFF
+autorecovery OFF
+autotrace OFF
+blockterminator "." (hex 2e)
+btitle OFFであり、次のSELECT文の先頭から数文字です。
+cmdsep OFF
+colsep " "
+compatibility version NATIVE
+concat "." (hex 2e)
+copycommit 0
+COPYTYPECHECKは、ON
+define "&" (hex 26)
+describe DEPTH 1 LINENUM OFF INDENT ON
+echo OFF
+editfile "afiedt.buf"
+embedded OFF
+escape OFF
+escchar OFF
+exitcommit ON
+6 行以上に対するFEEDBACKがONです。
+flagger OFF
+flush ON
+heading ON
+headsep "|" (hex 7c)
+instance "local"
+linesize 80
+lno 14
+loboffset 1
+logsource ""
+long 80
+longchunksize 80
+markup HTML OFF HEAD "<style type='text/css'> body {font:10pt Arial,Helvetica,sans-serif; color:black; background:White;} p {font:10pt Arial,Helvetica,sans-serif; color:black; background:White;} table,tr,td {font:10pt Arial,Helvetica,sans-serif; color:Black; background:#f7f7e7; padding:0px 0px 0px 0px; margin:0px 0px 0px 0px;} th {font:bold 10pt Arial,Helvetica,sans-serif; color:#336699; background:#cccc99; padding:0px 0px 0px 0px;} h1 {font:16pt Arial,Helvetica,Geneva,sans-serif; color:#336699; background-color:White; border-bottom:1px solid #cccc99; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;-
+} h2 {font:bold 10pt Arial,Helvetica,Geneva,sans-serif; color:#336699; background-color:White; margin-top:4pt; margin-bottom:0pt;} a {font:9pt Arial,Helvetica,sans-serif; color:#663300; background:#ffffff; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}</style><title>SQL*Plus Report</title>" BODY "" TABLE "border='1' width='90%' align='center' summary='Script output'" SPOOL OFF ENTMAP ON PREFORMAT OFF
+newpage 1
+null ""
+numformat ""
+numwidth 10
+pagesize 14
+PAUSE は OFF です。
+pno 0
+recsep WRAP
+recsepchar " " (hex 20)
+release 1102000100
+repfooter OFF であり、NULLです
+repheader OFF であり、NULLです
+securedcol is OFF
+serveroutput OFF
+shiftinout INVISIBLE
+showmode OFF
+spool OFF
+sqlblanklines OFF
+sqlcase MIXED
+sqlcode 0
+sqlcontinue "> "
+sqlnumber ON
+sqlpluscompatibility 11.2.0
+sqlprefix "#" (hex 23)
+sqlprompt "SQL> "
+sqlterminator ";" (hex 3b)
+suffix "sql"
+tab ON
+termout ON
+timing OFF
+trimout ON
+trimspool OFF
+ttitle OFFであり、次のSELECT文の先頭から数文字です。
+underline "-" (hex 2d)
+ユーザーは"SYS"です。
+verify ON
+wrap : 行がラップされます
+errorlogging is OFF
+SQL> CREATE TABLE USER_MASTER
+  2  (
+  3     USER_ID           VARCHAR2(8) NOT NULL,
+  4     DEPT_NO           VARCHAR2(8),
+  5     USER_NAME         VARCHAR2(32),
+  6     CREATED_ON        DATE DEFAULT SYSDATE,
+  7     MODIFIED_ON       DATE
+  8  );
+
+表が作成されました。
+
+SQL> select * from USER_MASTER
+  2
+SQL>
+SQL> select * from USER_MASTER;
+
+レコードが選択されませんでした。
+
+SQL> alert table user_master add column USER_NAME varchar(20);
+SP2-0734: "alert tabl..."で開始するコマンドが不明です - 残りの行は無視されました。
+SQL> alert table user_master add column USER_NAME varchar(20);
+SP2-0734: "alert tabl..."で開始するコマンドが不明です - 残りの行は無視されました。
+SQL> alter table user_master add column USER_NAME varchar(20);
+alter table user_master add column USER_NAME varchar(20)
+                            *
+行1でエラーが発生しました。:
+ORA-00904: : 無効な識別子です。
+
+
+SQL> alter table user_master add USER_NAME varchar(20);
+alter table user_master add USER_NAME varchar(20)
+                            *
+行1でエラーが発生しました。:
+ORA-01430: 追加する列がすでに表に存在しています。
+
+
+SQL> alter table user_master add USER_COMMENT varchar(20);
+
+表が変更されました。
+
+SQL> select * from USER_MASTER;
+
+レコードが選択されませんでした。
+
+SQL> insert into USER_MASTER ();INSERT INTO USER_MASTER (
+  2          USER_ID, DEPT_NO, USER_NAME, CREATED_ON, MODIFIED_ON
+  3  ) VALUES (
+  4          '0020', '1001',
+  5          '小泉 純一',
+  6          DEFAULT,
+  7          NULL
+  8  ) ;
+insert into USER_MASTER ();INSERT INTO USER_MASTER (
+                         *
+行1でエラーが発生しました。:
+ORA-00928: SELECTキーワードがありません。
+
+
+SQL> INSERT INTO USER_MASTER (
+  2          USER_ID, DEPT_NO, USER_NAME, CREATED_ON, MODIFIED_ON
+  3  ) VALUES (
+  4          '0020', '1001',
+  5          '小泉 純一',
+  6          DEFAULT,
+  7          NULL
+  8  ) ;
+
+1行が作成されました。
+
+SQL> select * from USER_MASTER;
+
+USER_ID  DEPT_NO  USER_NAME                        CREATED_ MODIFIED
+-------- -------- -------------------------------- -------- --------
+USER_COMMENT
+--------------------
+0020     1001     小泉 純一                        19-05-03
+
+
+
+SQL> insert into user_master (USER_ID, USER_COMMENT) values ( '0021', 'empty user info');
+
+1行が作成されました。
+
+SQL> select * from
+  2  user_master;
+
+USER_ID  DEPT_NO  USER_NAME                        CREATED_ MODIFIED
+-------- -------- -------------------------------- -------- --------
+USER_COMMENT
+--------------------
+0020     1001     小泉 純一                        19-05-03
+
+
+0021                                               19-05-03
+empty user info
+
+
+SQL>
+
+
+SQL*Plus: Release 11.2.0.1.0 Production on 金 5月 3 16:58:34 2019
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+ユーザー名を入力してください: SYSDBA
+パスワードを入力してください:
+ERROR:
+ORA-01017: invalid username/password; logon denied
+
+
+ユーザー名を入力してください: SYS
+パスワードを入力してください:
+ERROR:
+ORA-28009: connection as SYS should be as SYSDBA or SYSOPER
+
+
+ユーザー名を入力してください: SYS as SYSDBA
+パスワードを入力してください:
+
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+に接続されました。
 SQL>
 
 然后我终于登陆到这个傻逼系统里面了。
