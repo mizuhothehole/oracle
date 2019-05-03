@@ -12,3 +12,25 @@ these will do a good practice for altering database.
 数据库连接：这个是一个物理通路
 session：类似于网页session。一个用户用密码，登录了一个数据库。
 当然，一个连接可以有多个session。
+
+我今天在老的电脑上安装了之前在国内留下的oracle 11g，可是好像安装完成之后也登陆不上。
+不过我想起来我在国内的时候确实安装过。还用过sqlplus这个东西。
+
+然后我又从官网上下载了一次，用户名和密码都是goldeye的邮箱和我的通常用的密码。
+然后有下面两个包：
+
+win32_11gR2_database_1of2.zip (1,625,721,289 bytes)
+win32_11gR2_database_2of2.zip (631,934,821 bytes)
+
+C:\app\81809
+C:\app\81809\product\11.2.0\dbhome_1
+C:\app\81809\oradata
+
+global instance name:
+orcl
+
+PWD:
+root1A....
+
+然后任务就卡在了database configuration assistant 上面。
+https://localhost:1158/em
