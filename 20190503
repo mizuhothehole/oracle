@@ -14,3 +14,104 @@ go；
 基本上就是这个样子。
 
 out部分放在等于号左边，in部分放在等于号右边。
+
+logo创作你的创作 免费下载
+oracle存储过程常用技巧
+
+AlbenXie
+
+简书作者
+2017-07-11 11:40
+我们在进行pl/sql编程时打交道最多的就是存储过程了。存储过程的结构是非常的简单的，我们在这里除了学习存储过程的基本结构外，还会学习编写存储过程时相关的一些实用的知识。如：游标的处理，异常的处理，集合的选择等等
+
+1.存储过程结构
+1.1 第一个存储过程
+create or replace procedure proc1(   
+  p_para1 varchar2,   
+  p_para2 out varchar2,   
+  p_para3 in out varchar2   
+)as    
+ v_name varchar2(20);   
+begin   
+  v_name := '张三丰';   
+  p_para3 := v_name;   
+  dbms_output.put_line('p_para3:'||p_para3);   
+end;  
+上面就是一个最简单的存储过程。一个存储过程大体分为这么几个部分:
+创建语句：create or replace procedure 存储过程名
+如果没有or replace语句，则仅仅是新建一个存储过程。如果系统存在该存储过程，则会报错。Create or replace procedure 如果系统中没有此存储过程就新建一个，如果系统中有此存储过程则把原来删除掉，重新创建一个存储过程。
+存储过程名定义：包括存储过程名和参数列表。参数名和参数类型。参数名不能重复， 参数传递方式:IN, OUT, IN OUT
+IN 表示输入参数，按值传递方式。
+OUT 表示输出参数，可以理解为按引用传递方式。可以作为存储过程的输出结果，供外部调用者使用。
+IN OUT 即可作输入参数，也可作输出参数。
+参数的数据类型只需要指明类型名即可，不需要指定宽度。
+参数的宽度由外部调用者决定。
+过程可以有参数，也可以没有参数
+变量声明块：紧跟着的as (is )关键字，可以理解为pl/sql的declare关键字，用于声明变量。
+变量声明块用于声明该存储过程需要用到的变量，它的作用域为该存储过程。另外这里声明的变量必须指定宽度。遵循PL/SQL的变量声明规范。
+过程语句块：从begin 关键字开始为过程的语句块。存储过程的具体逻辑在这里来实现。
+异常处理块：关键字为exception ，为处理语句产生的异常。该部分为可选
+结束块：由end关键字结果。
+
+1.2 存储过程的参数传递方式
+存储过程的参数传递有三种方式:IN,OUT,IN OUT .
+IN 按值传递，并且它不允许在存储过程中被重新赋值。如果存储过程的参数没有指定存参数传递类型，默认为IN
+
+create or replace procedure proc1(   
+  p_para1 varchar2,   
+  p_para2 out varchar2,   
+  p_para3 in out varchar2   
+)as    
+ v_name varchar2(20);   
+begin   
+  p_para1 :='aaa';   
+  p_para2 :='bbb';   
+  v_name := '张三丰';   
+  p_para3 := v_name;   
+  dbms_output.put_line('p_para3:'||p_para3);   
+  null;   
+end;   
+       
+Warning: Procedure created with compilation errors   
+  
+SQL> show error;   
+Errors for PROCEDURE LIFEMAN.PROC1:   
+  
+LINE/COL ERROR   
+-------- ----------------------------------------------------------------------   
+8/3      PLS-00363: expression 'P_PARA1' cannot be used as an assignment target   
+8/3      PL/SQL: Statement ignored  
+这一点与其它高级语言都不同。它相当于java在参数前面加上final关键字。
+
+OUT 参数：作为输出参数，需要注意，当一个参数被指定为OUT类型时，就算在调用存储过程之前对该参数进行了赋值，在存储过程中该参数的值仍然是null.
+
+create or replace procedure proc1(   
+  p_para1 varchar2,   
+  p_para2 out varchar2,   
+  p_para3 in out varchar2   
+)as    
+ v_name varchar2(20);   
+begin   
+  v_name := '张三丰';   
+  p_para3 := v_name;   
+  dbms_output.put_line('p_para1:'||p_para1);   
+  dbms_output.put_line('p_para2:'||p_para2);   
+  dbms_output.put_line('p_para3:'||p_para3);   
+end;   
+  
+SQL> var p1 varchar2(10);   
+SQL> var p2 varchar2(10);   
+SQL> var p3 varchar2(10);   
+SQL> exec :p1 :='aaaa';   
+SQL> exec :p2 :='bbbb';   
+SQL> exec :p3 :='cccc';   
+SQL> exec proc1(:p1,:p2,:p3);   
+p_para1:aaaa   
+p_para2:   
+p_para3:张三丰   
+SQL> exec dbms_output.put_line(:p2);   
+  
+  
+PL/SQL procedure successfully completed   
+p2   
+---------  
