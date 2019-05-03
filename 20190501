@@ -34,3 +34,32 @@ root1A....
 
 然后任务就卡在了database configuration assistant 上面。
 https://localhost:1158/em
+
+
+SQL*Plus: Release 11.2.0.1.0 Production on 金 5月 3 16:58:34 2019
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+ユーザー名を入力してください: SYSDBA
+パスワードを入力してください:
+ERROR:
+ORA-01017: invalid username/password; logon denied
+
+
+ユーザー名を入力してください: SYS
+パスワードを入力してください:
+ERROR:
+ORA-28009: connection as SYS should be as SYSDBA or SYSOPER
+
+
+ユーザー名を入力してください: SYS as SYSDBA
+パスワードを入力してください:
+
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+に接続されました。
+SQL>
+
+然后我终于登陆到这个傻逼系统里面了。
+看见l了SQL三个大字。
