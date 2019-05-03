@@ -115,3 +115,6 @@ SQL> exec dbms_output.put_line(:p2);
 PL/SQL procedure successfully completed   
 p2   
 ---------  
+
+关于存储过程中的变量的in，out和 in out，in 是相当于Java的final，
+out相当于，从外面穿不进去值，in out相当于是cpp里面的引用。
