@@ -12,6 +12,10 @@ these will do a good practice for altering database.
 数据库连接：这个是一个物理通路
 session：类似于网页session。一个用户用密码，登录了一个数据库。
 当然，一个连接可以有多个session。
+schema和user的关系呢？
+一个schema对应一个用户。
+schema是oracle数据库的一个逻辑结构。
+user是用来连接数据库的。
 
 我今天在老的电脑上安装了之前在国内留下的oracle 11g，可是好像安装完成之后也登陆不上。
 不过我想起来我在国内的时候确实安装过。还用过sqlplus这个东西。
