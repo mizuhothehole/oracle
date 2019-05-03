@@ -1,0 +1,16 @@
+存储过程
+
+存储过程是一种编程。因为它会被编译掉。
+
+create procedure procedure_name
+varname1 vartype，
+varname2 vartype out
+as（is）
+begin
+sql_statement --can work with var
+end
+go；
+
+基本上就是这个样子。
+
+out部分放在等于号左边，in部分放在等于号右边。
