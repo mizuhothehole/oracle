@@ -1,0 +1,9 @@
+Sql in oracle
+
+create table test_1 (id number(1,0), name varchar2(20));
+
+INSERT INTO "SYSTEM"."TEST_1" (ID, NAME) VALUES (2,'aya'); 
+
+ALTER TABLE "SYSTEM"."TEST_1" ADD (HOJIN_FLAG NUMBER(1));
+
+ALTER TABLE "SYSTEM"."TEST_1" ADD (HOJIN_FLAG_BOOL CHAR(1));
