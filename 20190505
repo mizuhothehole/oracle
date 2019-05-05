@@ -7,3 +7,7 @@ INSERT INTO "SYSTEM"."TEST_1" (ID, NAME) VALUES (2,'aya');
 ALTER TABLE "SYSTEM"."TEST_1" ADD (HOJIN_FLAG NUMBER(1));
 
 ALTER TABLE "SYSTEM"."TEST_1" ADD (HOJIN_FLAG_BOOL CHAR(1));
+
+alter session set ddl_lock_timeout = 10;
+
+Sessionが変更されました。
